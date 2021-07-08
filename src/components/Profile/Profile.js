@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import myImage from "../../assets/images/chris.jpeg";
+import myImage from "../../assets/images/chris.jpg";
 import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
 import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined";
 import resumeData from "../../utils/resumeData";
