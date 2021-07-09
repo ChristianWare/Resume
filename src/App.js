@@ -1,5 +1,5 @@
 // Library Imports
-import React, { Profiler } from "react";
+import React, { Profiler, useState } from "react";
 import { Container, Grid } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -13,6 +13,8 @@ import Resume from "./pages/Resume/Resume";
 import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
   return (
     <Container className={"top_60"}>
       <Grid container spacing={7}>

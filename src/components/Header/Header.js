@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Button,
   Form,
@@ -28,6 +29,7 @@ const Header = (props) => {
   const pathName = props?.location?.pathname;
 
   return (
+    <motion.div animate={{opacity: 1, transition: { duration: 1 }}} initial={{opacity: 0}}>
     <Navbar expand='lg' sticky='top' className='header'>
       {/* Home Link */}
       <Nav.Link as={NavLink} to='/' className='header_navlink'>
@@ -45,7 +47,7 @@ const Header = (props) => {
             as={NavLink}
             to='/'
             className={pathName == "/" ? "header_link_active" : "header_link"}
-          >
+          > 
             Resume
           </Nav.Link>
           {/* Portfolio Link */}
@@ -69,6 +71,7 @@ const Header = (props) => {
         </div>
       </Navbar.Collapse>
     </Navbar>
+    </motion.div>
   );
 };
 

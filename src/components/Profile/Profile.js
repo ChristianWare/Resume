@@ -9,6 +9,7 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import CustomButton from "../Button/Button";
 import GetAppIcon from "@material-ui/icons/GetApp";
+import { motion } from "framer-motion";
 
 const CustomTimelineItem = ({ title, text, link }) => (
   <TimelineItem>
@@ -33,37 +34,45 @@ const CustomTimelineItem = ({ title, text, link }) => (
 
 const Profile = () => {
   return (
-    <div className='profile container_shadow'>
-      <div className='profile_name'>
-        <Typography className='name'>{resumeData.name}</Typography>
-        <Typography className='title'>{resumeData.title}</Typography>
-      </div>
+    <motion.div
+      animate={{ opacity: 1, transition: { duration: 1 } }}
+      initial={{ opacity: 0 }}
+    >
+      <div className='profile container_shadow'>
+        <div className='profile_name'>
+          <Typography className='name'>{resumeData.name}</Typography>
+          <Typography className='title'>{resumeData.title}</Typography>
+        </div>
 
-      <figure className='profile_image'>
-        <img src={myImage} alt='' />
-      </figure>
+        <figure className='profile_image'>
+          <img src={myImage} alt='' />
+        </figure>
 
-      <div className='profile_information'>
-        <CustomTimeline icon={<PersonOutlineOutlinedIcon />}>
-          <CustomTimelineItem title='Name: ' text={resumeData.name} />
-          <CustomTimelineItem title='Title: ' text={resumeData.title} />
-          <CustomTimelineItem title='Email: ' text={resumeData.email} />
-          <CustomTimelineItem title='Mobile: ' text={resumeData.mobile} />
-          <CustomTimelineItem title='Residence: ' text={resumeData.residence} />
+        <div className='profile_information'>
+          <CustomTimeline icon={<PersonOutlineOutlinedIcon />}>
+            <CustomTimelineItem title='Name: ' text={resumeData.name} />
+            <CustomTimelineItem title='Title: ' text={resumeData.title} />
+            <CustomTimelineItem title='Email: ' text={resumeData.email} />
+            <CustomTimelineItem title='Mobile: ' text={resumeData.mobile} />
+            <CustomTimelineItem
+              title='Residence: '
+              text={resumeData.residence}
+            />
 
-          {/* {Object.keys(resumeData.socials).map((key) => (
+            {/* {Object.keys(resumeData.socials).map((key) => (
             <CustomTimelineItem
               title={key}
               text={resumeData.socials[key].text}
               link={resumeData.socials[key].link}
             />
           ))} */}
-        </CustomTimeline>
-        <div className='button_container'>
-          <CustomButton text={"Download Cv"} icon={<GetAppIcon />} />
+          </CustomTimeline>
+          <div className='button_container'>
+            <CustomButton text={"Download Cv"} icon={<GetAppIcon />} />
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
