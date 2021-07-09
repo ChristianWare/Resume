@@ -10,6 +10,7 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import CustomButton from "../Button/Button";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import { motion } from "framer-motion";
+import Resume from "../../assets/Resume/ChrisWare_2021_Resume.pdf";
 
 const CustomTimelineItem = ({ title, text, link }) => (
   <TimelineItem>
@@ -18,7 +19,7 @@ const CustomTimelineItem = ({ title, text, link }) => (
       {link ? (
         <Typography className='timelineItem_text'>
           <span>{title}</span>{" "}
-          <a href={link} target='_blank'>
+          <a href={link} target='_blank' rel='noreferrer'>
             {text}
           </a>
         </Typography>
@@ -68,7 +69,12 @@ const Profile = () => {
           ))} */}
           </CustomTimeline>
           <div className='button_container'>
-            <CustomButton text={"Download Cv"} icon={<GetAppIcon />} />
+            <CustomButton
+              text={"Download Cv"}
+              icon={<GetAppIcon />}
+              href={Resume}
+              download="Christian Ware's Resume"
+            />
           </div>
         </div>
       </div>

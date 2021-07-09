@@ -1,5 +1,5 @@
 // Library Imports
-import React, { Profiler, useState } from "react";
+import React from "react";
 import { Container, Grid } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { motion } from "framer-motion"; 
@@ -14,7 +14,6 @@ import Resume from "./pages/Resume/Resume";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("light");
 
   return (
     <motion.div

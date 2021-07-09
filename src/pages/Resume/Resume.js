@@ -1,4 +1,4 @@
-import { Grid, Icon, Paper, TextField, Typography } from "@material-ui/core";
+import { Grid, Paper, TextField, Typography } from "@material-ui/core";
 import React from "react";
 import "./Resume.css";
 import resumeData from "../../utils/resumeData";
@@ -11,16 +11,17 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import SchoolIcon from "@material-ui/icons/School";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import CustomButton from "../../components/Button/Button";
-import { motion } from "framer-motion";
+
+// contact form import
+import { FormspreeProvider } from "@formspree/react";
+import { useForm } from "@formspree/react";
 
 const Resume = () => {
+  const [state, handleSubmit] = useForm("contactMe");
   return (
     <>
       {/* About Me */}
-      <motion.div
-        animate={{ opacity: 1, transition: { duration: 1 } }}
-        initial={{ opacity: 0 }}
-      >
+      <FormspreeProvider project='1718532502366191536'>
         <Grid container className='section pb_45 pt_45'>
           <Grid item className='section_title mb_30'>
             <span></span>
@@ -93,31 +94,6 @@ const Resume = () => {
             </Grid>
           </Grid>
         </Grid>
-        {/* Services */}
-        <Grid container className='section pb_45'>
-          <Grid item className='section_title mb_30'>
-            <span></span>
-            <h6 className='section_title_text'>My Services</h6>
-          </Grid>
-
-          <Grid item xs={12}>
-            <Grid container spacing={3} justify='space-around'>
-              {resumeData.services.map((service) => (
-                <Grid item xs={12} sm={6} md={3}>
-                  <div className='service'>
-                    <Icon className='service_icon'>{service.icon}</Icon>
-                    <Typography className='service_title' variant='h6'>
-                      {service.title}
-                    </Typography>
-                    <Typography className='service_description' variant='body2'>
-                      {service.description}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Grid>
-        </Grid>
 
         {/* Skills */}
         <Grid container className='section graybg pb_45 p_50'>
@@ -181,6 +157,7 @@ const Resume = () => {
               </Grid>
             </Grid>
           </Grid>
+
           {/* Contact Information */}
           <Grid item xs={12} lg={5}>
             <Grid container>
@@ -223,7 +200,7 @@ const Resume = () => {
             </Grid>
           </Grid>
         </Grid>
-      </motion.div>
+      </FormspreeProvider>
     </>
   );
 };

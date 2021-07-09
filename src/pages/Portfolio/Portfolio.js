@@ -41,7 +41,7 @@ const Portfolio = () => {
             label='All'
             value='All'
             className={
-              tabValue == "All" ? "customTabs_item active" : "customTabs_item"
+              tabValue === "All" ? "customTabs_item active" : "customTabs_item"
             }
           />
 
@@ -51,12 +51,14 @@ const Portfolio = () => {
                 label={tag}
                 value={tag}
                 className={
-                  tabValue == "All"
+                  tabValue === "All"
                     ? "customTabs_item active"
                     : "customTabs_item"
                 }
                 className={
-                  tabValue == tag ? "customTabs_item active" : "customTabs_item"
+                  tabValue === tag
+                    ? "customTabs_item active"
+                    : "customTabs_item"
                 }
               />
             )
@@ -69,7 +71,7 @@ const Portfolio = () => {
         <Grid container spacing={3}>
           {resumeData.projects.map((project) => (
             <>
-              {tabValue == project.tag || tabValue == "All" ? (
+              {tabValue === project.tag || tabValue === "All" ? (
                 <Grid item xs={12} sm={6} md={4}>
                   <Grow in timeout={1000}>
                     <Card
@@ -122,7 +124,12 @@ const Portfolio = () => {
         </DialogContent>
         <DialogActions className='projectDialog_actions'>
           {projectDialog?.links?.map((link) => (
-            <a href={link.link} target='_blank' className='projectDialog_icon'>
+            <a
+              href={link.link}
+              target='_blank'
+              className='projectDialog_icon'
+              rel='noreferrer'
+            >
               {link.icon}
             </a>
           ))}
