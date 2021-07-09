@@ -23,16 +23,6 @@ export default {
   ),
 
   socials: {
-    Facebook: {
-      link: "https://www.facebook.com",
-      text: "Facebook.com/cw",
-      icon: <FacebookIcon />,
-    },
-    Twitter: {
-      link: "https://www.twitter.com",
-      text: "@MyTwitter",
-      icon: <TwitterIcon />,
-    },
     LinkedIn: {
       link: "https://www.linkedin.com",
       text: "LinkedIn.com/cw",
@@ -114,20 +104,20 @@ export default {
     {
       title: "FRONT END",
       description: [
-        "ReactJS",
+        "React",
         "JavaScript",
-        "TypeScript",
-        "Bootstrap",
+        "Styled Components",
         "Material UI",
+        "Framer Motion",
       ],
     },
     {
       title: "BACK END",
-      description: ["NodeJS", "Java", "Phython", "Solidity"],
+      description: ["NodeJS", "Express", "MongoDB", "Firebase"],
     },
     {
-      title: "DATABASES",
-      description: ["Firebase", "My SQL Server", "MySQL", "MongoDB"],
+      title: "DESIGN TOOLS",
+      description: ["Figma", "CodePen", "Balsamiq"],
     },
     {
       title: "SOURCE CONTROL",
