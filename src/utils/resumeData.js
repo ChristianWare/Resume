@@ -5,8 +5,13 @@ import {
   GitHub,
   Language,
   WebOutlined,
-  YouTube,
 } from "@material-ui/icons";
+import disImg from "../assets/images/disClonePrev.png";
+import dollaPrev from "../assets/images/dollaPrev.png";
+import lavPrev from "../assets/images/lavPrev.png";
+import musicPrev from "../assets/images/musicPrev.png";
+import capPrev from "../assets/images/capPrev.png";
+import ultraPrev from "../assets/images/ultraPrev.png";
 
 export default {
   name: "Chris Ware",
@@ -91,7 +96,7 @@ export default {
     {
       title: "Branding Identity",
       description:
-        "We will male you a brand that is catchy and leaves a trace.",
+        "We will make you a brand that is catchy and leaves a trace.",
       icon: <AssignmentIndOutlined />,
     },
     {
@@ -120,7 +125,14 @@ export default {
     {
       title: "MISCELLANEOUS",
       description: [
-        "P.C.", "Mac", "Word", "Excel", "Power-Point", "Outlook", "Photoshop", "Illustrator",
+        "P.C.",
+        "Mac",
+        "Word",
+        "Excel",
+        "Power-Point",
+        "Outlook",
+        "Photoshop",
+        "Illustrator",
       ],
     },
     {
@@ -132,55 +144,95 @@ export default {
   projects: [
     {
       tag: "React",
-      image:
-        "https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80",
-      title: "React Project 1",
-      caption: "A short description",
-      description: "This is my project description, please fill it in.",
+      image: `${disImg}`,
+      title: "Disney Plus Clone",
+      caption:
+        "This is a clone of the Disney Plus Streaming Platform. Open for more details.",
+      description:
+        "This is a clone of the Disney Plus Streaming Platform that I built with React. I used Redux for the state management, Firebase for back end authentication, and Styled Components for the styling. I also used Framer Motion to add the ease in affect when the site first loads. This clone was deployed using Netlify. Click below to see the code on Github, and the live site. ",
       links: [
-        // { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/ChristianWare/Disney-Clone",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://mydisney-clone.netlify.app/",
+          icon: <Language />,
+        },
       ],
     },
 
     {
       tag: "React",
-      image:
-        "https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80",
-      title: "React Project 2",
-      caption: "A short description",
-      description: "This is my project description, please fill it in.",
+      image: `${dollaPrev}`,
+      title: "Dolla",
+      caption: "Dolla is an online banking website. Open for more details. ",
+      description:
+        "Dolla is an online banking website that I built with React. I used  Styled Components for the styling, React Router DOM for routing, and React-Scroll for a smooth scrolling affect. I also used Framer Motion to add the ease in affect when the site first loads. Dolla was deployed using Netlify. Click below to see the code on Github, and the live site.",
       links: [
-        // { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        { link: "https://github.com/ChristianWare/dolla", icon: <GitHub /> },
+        { link: "https://my-dolla-site.netlify.app", icon: <Language /> },
       ],
     },
     {
-      tag: "Python",
-      image:
-        "https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80",
-      title: "Python Project 1",
-      caption: "A short description",
-      description: "This is my project description, please fill it in.",
+      tag: "React",
+      image: `${lavPrev}`,
+      title: "Lavish",
+      caption:
+        "Lavish is a credit card promotional website. Open for more details.",
+      description:
+        "Lavish is a credit card website that I built with React. I styled each component with CSS, set up routing with React Router DOM, and I am also importing React-Icons for the various icons used throughout the site. I also used Framer Motion to add the ease in affect when the site first loads. Lavish was deployed using Netlify. Click below to see the code on Github, and the live site.",
       links: [
-        // { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        { link: "https://github.com/ChristianWare/Lavish", icon: <GitHub /> },
+        { link: "https://lavish-cc.netlify.app/", icon: <Language /> },
       ],
     },
     {
-      tag: "Java",
-      image:
-        "https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1430&q=80",
-      title: "Java Project 1",
-      caption: "A short description",
-      description: "This is my project description, please fill it in.",
+      tag: "React",
+      image: `${musicPrev}`,
+      title: "Waves Music App",
+      caption:
+        "Waves is a music app that plays relaxing songs from chillhop.com. Open for more details.",
+      description:
+        "Waves is a music app that I built with React. I styled each component with Styled Components, set up routing with React Router DOM, and I am also importing React-Icons for the various icons used throughout the site. I also used Framer Motion to add the ease in affect when the site first loads. Waves was deployed using Netlify. Click below to see the code on Github, and the live site.",
       links: [
-        // { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/ChristianWare/Music-Player",
+          icon: <GitHub />,
+        },
+        { link: "https://wave-music-app.netlify.app", icon: <Language /> },
+      ],
+    },
+    {
+      tag: "React",
+      image: `${capPrev}`,
+      title: "Capture",
+      caption:
+        "Capture is a test portfolio website for a photogrpahy agency. Open for more details.",
+      description:
+        "Capture is a test portfolio website for a photogrpahy agency that I built with React. I styled each component with Styled Components, set up routing with React Router DOM, and I am also importing React-Icons for the various icons used throughout the site. I also used Framer Motion to add the ease in affect when the site first loads. Waves was deployed using Netlify. Click below to see the code on Github, and the live site.",
+      links: [
+        {
+          link: "https://github.com/ChristianWare/Portfolio2",
+          icon: <GitHub />,
+        },
+        { link: "cap-portfolio.netlify.app", icon: <Language /> },
+      ],
+    },
+    {
+      tag: "React",
+      image: `${ultraPrev}`,
+      title: "Ultra",
+      caption:
+        "Ultra is a marketing lean generation website. Open for more details.",
+      description:
+        "Ultra is a marketing lean generation website. I styled each component with CSS, set up routing with React Router DOM, and I am also importing React-Icons for the various icons used throughout the site. I also used Framer Motion to add the ease in affect when the site first loads. Ultra was deployed using Netlify. Click below to see the code on Github, and the live site.",
+      links: [
+        {
+          link: "https://github.com/ChristianWare/Ultra-App",
+          icon: <GitHub />,
+        },
+        { link: "https://ultra-marketing.netlify.app", icon: <Language /> },
       ],
     },
   ],
